@@ -1,0 +1,111 @@
+/* Krron – Shop-Seiten: Produkt, Warenkorb, Checkout, Konto, Bestellungen */
+
+.breadcrumb { margin-bottom: 10px; font-size: 13px; color: var(--muted); }
+
+/* ---------- Produktseite ---------- */
+.product-page {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(300px, 1.4fr) 280px;
+    gap: 16px;
+    align-items: start;
+    margin-bottom: 16px;
+}
+.pp-image { display: grid; place-items: center; min-height: 320px; }
+.pp-image img { max-width: 100%; max-height: 420px; object-fit: contain; }
+.pp-noimg { font-size: 90px; color: #b8c2c2; }
+.pp-info h1 { font-size: 24px; }
+.pp-info hr { border: 0; border-top: 1px solid var(--border); margin: 12px 0; }
+.deal-line { display: flex; align-items: baseline; gap: 10px; }
+.deal-pct { color: var(--price); font-size: 24px; }
+.deal-price { font-size: 28px; }
+.stars { color: var(--star); letter-spacing: 1px; }
+.stars.big { font-size: 17px; }
+.stars.big a { font-size: 14px; letter-spacing: 0; margin-left: 6px; }
+.pp-buy .in { color: var(--success); font-size: 18px; }
+.pp-buy .low, .low { color: var(--price); }
+.pp-buy .out { color: var(--price); font-size: 18px; }
+.pp-buy select { max-width: 90px; }
+
+/* ---------- Bewertungen ---------- */
+.reviews { margin-bottom: 16px; }
+.review { border-top: 1px solid #e7e9e9; padding: 12px 0; }
+.review p { margin: 6px 0 0; }
+.review-form { margin-bottom: 18px; padding-bottom: 12px; }
+
+.star-input { display: inline-flex; flex-direction: row-reverse; margin-bottom: 8px; }
+.star-input input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.star-input label { font-size: 30px; color: #c9cfcf; cursor: pointer; margin: 0; padding: 0 2px; line-height: 1; font-weight: 400; }
+.star-input input:checked ~ label,
+.star-input label:hover,
+.star-input label:hover ~ label { color: var(--star); }
+.star-input input:focus-visible + label { outline: 2px solid var(--orange); }
+
+/* ---------- Warenkorb ---------- */
+.cart-layout { display: grid; grid-template-columns: 1fr 300px; gap: 16px; align-items: start; }
+.cart-line { display: grid; grid-template-columns: 110px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid #e7e9e9; }
+.cl-img { display: grid; place-items: center; height: 100px; background: #f7f8f8; border-radius: 6px; overflow: hidden; font-size: 40px; color: #b8c2c2; }
+.cl-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.cl-main a { color: var(--text); }
+.cl-actions { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
+.cl-actions input { width: 72px; }
+.cl-price { font-weight: 700; font-size: 17px; text-align: right; }
+.cart-update { margin-top: 12px; display: flex; gap: 10px; align-items: center; }
+.cart-subtotal { text-align: right; font-size: 18px; margin-top: 14px; }
+.cart-side .cart-subtotal { text-align: left; margin-top: 0; }
+.cart-side { position: sticky; top: 120px; }
+
+/* ---------- Checkout ---------- */
+.checkout-layout { display: grid; grid-template-columns: 1fr 320px; gap: 16px; align-items: start; }
+.checkout-layout .card { margin-bottom: 14px; }
+.checkout-layout h2 { font-size: 18px; }
+.checkout-side { position: sticky; top: 120px; }
+.sum-line { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; }
+.sum-line.total { border-top: 1px solid var(--border); margin-top: 8px; padding-top: 10px; font-size: 18px; font-weight: 700; color: var(--price); }
+.green { color: var(--success); }
+.coupon-row { display: flex; gap: 10px; }
+.coupon-row input { max-width: 300px; text-transform: uppercase; }
+.radio-line { display: flex; gap: 10px; align-items: center; font-weight: 400; margin: 10px 0; cursor: pointer; }
+.radio-line input { width: auto; }
+
+/* ---------- Konto & Bestellungen ---------- */
+.account-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; align-items: start; }
+.balance-big { font-size: 34px; font-weight: 700; color: var(--success); }
+.table-simple { width: 100%; border-collapse: collapse; }
+.table-simple th, .table-simple td { text-align: left; padding: 7px 6px; border-bottom: 1px solid #e7e9e9; }
+.table-simple th { font-size: 12px; color: var(--muted); text-transform: uppercase; }
+
+.order-card { margin-bottom: 14px; padding: 0; overflow: hidden; }
+.order-head {
+    background: #f0f2f2;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+    font-size: 13px;
+    color: var(--muted);
+}
+.order-head strong { display: block; color: var(--text); font-size: 14px; }
+.order-body { padding: 14px 20px; }
+.order-items .sum-line { border-bottom: 1px solid #f0f2f2; }
+.order-msg { background: #eef7fb; border-left: 3px solid #0099c3; padding: 8px 12px; margin: 10px 0; border-radius: 3px; }
+.order-msg small { display: block; }
+.order-note { background: #fff4f4; border-left: 3px solid var(--danger); padding: 8px 12px; margin: 10px 0; border-radius: 3px; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; background: #e3e6e6; }
+.tag-red { background: #fde1e1; color: #8a0000; }
+.tag-green { background: #d9f4ea; color: #035a45; }
+.tag-orange { background: #ffe9c7; color: #8a4b00; }
+.btn-danger { background: #fff; border-color: var(--danger); color: var(--danger); }
+.btn-danger:hover { background: #fff4f4; color: var(--danger); }
+.btn-sm { padding: 4px 12px; font-size: 13px; }
+
+@media (max-width: 1000px) {
+    .product-page { grid-template-columns: 1fr 1fr; }
+    .pp-buy { grid-column: 1 / -1; }
+}
+@media (max-width: 760px) {
+    .product-page, .cart-layout, .checkout-layout { grid-template-columns: 1fr; }
+    .cart-side, .checkout-side { position: static; }
+    .cart-line { grid-template-columns: 80px 1fr; }
+    .cl-price { grid-column: 2; text-align: left; }
+}

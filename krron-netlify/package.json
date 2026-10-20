@@ -1,0 +1,11 @@
+{
+  "name": "krron-shop",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Krron – Amazon-Style Shop für Roleplay-Server (Netlify Functions + Netlify Database)",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@netlify/database": "latest"
+  }
+}
